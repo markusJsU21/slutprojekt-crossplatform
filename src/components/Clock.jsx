@@ -1,24 +1,22 @@
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
 
 const Clock = () => {
 
-   const time = new Date()
+    const [time, setTime] = useState(new Date())
+    useEffect( () =>{
+        setInterval(() => updateClock(), 1000)
+    },[])
 
    function updateClock(){
-       time = new Date()
-       return time
+      setTime(new Date())
    }
-//    const [seconds, setSeconds] = useState(time.getSeconds())
+
 
     return (
         <div>
-            <h1>Detta är en klocka</h1>
-            <p>hej</p>
-            <p>{time.toString()}</p>
+            <p>{time.toLocaleTimeString()}</p>
         </div>
     )
 }
 
 export default Clock;
-
-//{setSeconds(time.getSeconds())}
