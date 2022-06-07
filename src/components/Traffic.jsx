@@ -1,8 +1,8 @@
-import { getABus } from "../API"
+import { getATimetable } from "../API/index.js"
 
 const Traffic = () => {
     async function getTheBus(){
-        const response = await getABus()
+        const response = await getATimetable()
         console.log(response)
     }
     getTheBus()
