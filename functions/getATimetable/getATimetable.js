@@ -8,7 +8,7 @@ const handler = async (event) => {
   const url = "https://api.resrobot.se/v2.1/departureBoard?id=740000002&format=json"
   try{
     const response = await axios.get(`${url}&accessId=${API_KEY}`)
-    console.log('Response från getATimetable är ' , response)
+    // console.log('Response från getATimetable är ' , response)
     return {
       statusCode: 200,
       body: JSON.stringify(response.data)
