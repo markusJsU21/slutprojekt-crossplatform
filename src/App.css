@@ -1,6 +1,15 @@
+:root {
+  --iths-purple: #693250;
+  --iths-white:  #fcfafb;
+  --iths-grey: #f5f5f5;
+
+}
+
 .App {
   text-align: center;
 }
+
+
 
 .App-logo {
   height: 40vmin;
