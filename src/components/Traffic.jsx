@@ -10,9 +10,12 @@ const Traffic = () => {
         const response = await getStopId()
         console.log('Get stop är: ' , response)
     }
-    getStop()
+
     return (
-        <p>Traffikinfo</p>
+        <div>
+            <p>Traffikinfo</p>
+            <button onClick={getStop}>Get stop</button>
+        </div>
     )
 }
 
