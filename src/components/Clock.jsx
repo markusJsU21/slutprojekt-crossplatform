@@ -11,7 +11,6 @@ const Clock = () => {
       setTime(new Date())
    }
 
-
     return (
         <div>
             <p>{time.toLocaleTimeString()}</p>
