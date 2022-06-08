@@ -8,9 +8,23 @@ const handler = async (event) => {
 
   const timeNow = new Date()
   // timeNow = timeNow.toLocaleTimeString()
-  timeNow.setMinutes(timeNow.getMinutes() + 10);
+
+  const minutes = timeNow.setMinutes(timeNow.getMinutes() + 10);
   // console.log(timeNow.toLocaleTimeString())
+  // function fixMinutes(number){
+  //   if(number<10){
+  //     number.toString()
+  //     number = '0'+number
+
+  //   }
+  // }
   let current = timeNow.getHours() + ':' + timeNow.getMinutes();
+
+  if(current.length===4){
+    current.split()
+    current.splice(3, 0, '0')
+    current.toString()
+  }
   console.log(current)
   const url = `https://api.resrobot.se/v2.1/departureBoard?time=${current}&maxJourneys=10&id=740004046&format=json`
   try{
