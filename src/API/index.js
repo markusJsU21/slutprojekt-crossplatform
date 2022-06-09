@@ -12,6 +12,10 @@ export async function getATimetable(){
     }
 //    const response = await axios.get(`https://api.resrobot.se/v2.1/departureBoard?id=740000002&format=json&accessId=${API_KEY}`)
 }
+
+export async function getWeather(){
+
+}
 // export async function getStopId(){
 //     const response = await axios.get(`http://localhost:8888/.netlify/functions/getStopId`)
 // //    const response = await axios.get(`https://api.resrobot.se/v2.1/departureBoard?id=740000002&format=json&accessId=${API_KEY}`)
