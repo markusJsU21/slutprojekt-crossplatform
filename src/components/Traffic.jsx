@@ -20,14 +20,10 @@ const Traffic = () => {
         console.log(tenNext)
 
     }
-    const list = [
-        "Bananpaj",
-        "Grillkorv"
-      ]
 
     return (
         <div>
-            <p>Traffikinfo</p>
+            <p>Avgångar från Liljeholmen om 10 minuter</p>
             <ul>
         {/* {list} */}
         {/* for(let tenDepartures of departures){
