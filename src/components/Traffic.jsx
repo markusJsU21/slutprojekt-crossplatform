@@ -1,8 +1,8 @@
 import { getATimetable } from "../API/index.js"
 import {useState, useEffect} from 'react'
 
-const ListItem = ({title}) => {
-    return <li>{title}</li>
+const ListItem = ({line, time, destination}) => {
+    return <li>Linje: {line} Avgår: {time} Mot: {destination}</li>
   }
 
 const Traffic = () => {
@@ -35,7 +35,7 @@ const Traffic = () => {
             </li>        } */}
         {/* {list.map(item => (<ListItem title={item} key={item} />) )} */}
 
-        {table.map(departure => (<ListItem title={departure.name} key={departure.stopid} />) )}
+        {table.map(departure => (<ListItem line={departure.ProductAtStop.line} time={departure.time} destination={departure.direction} key={departure.Product.matchId} />) )}
       </ul>
             {/* <button onClick={getStop}>Get stop</button> */}
         </div>
