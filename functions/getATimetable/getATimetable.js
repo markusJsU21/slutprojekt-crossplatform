@@ -6,26 +6,19 @@ const API_KEY = process.env.API_KEY
 //access_key="123"&query=1234,1234&vårtAPI
 const handler = async (event) => {
 
+
+
   const timeNow = new Date()
-  // timeNow = timeNow.toLocaleTimeString()
 
-  const minutes = timeNow.setMinutes(timeNow.getMinutes() + 10);
-  // console.log(timeNow.toLocaleTimeString())
-  // function fixMinutes(number){
-  //   if(number<10){
-  //     number.toString()
-  //     number = '0'+number
 
-  //   }
-  // }
-  let current = timeNow.getHours() + ':' + timeNow.getMinutes();
 
-  if(current.length===4){
-    current.split()
-    current.splice(3, 0, '0')
-    current.toString()
-  }
+  timeNow.setMinutes(timeNow.getMinutes() + 10)
+  const hours = timeNow.getHours().toString().padStart(2, '0')
+  const minutes = timeNow.getMinutes().toString().padStart(2, '0')
+  let current = hours + ':' + minutes
+
   console.log(current)
+
   const url = `https://api.resrobot.se/v2.1/departureBoard?time=${current}&maxJourneys=10&id=740004046&format=json`
   try{
 
