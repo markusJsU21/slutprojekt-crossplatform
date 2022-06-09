@@ -3,7 +3,7 @@ import axios from 'axios'
 
 export async function getATimetable(){
     if(process.env.NODE_ENV === 'production'){
-        const response = await axios.get(`.netlify/functions/getATimetable`)
+        const response = await axios.get(`https://stunning-treacle-66df98.netlify.app/.netlify/functions/getATimetable`)
         return response.data
     }
     else{
