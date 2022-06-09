@@ -37,7 +37,7 @@ const Traffic = () => {
 
     return (
         <div>
-            <p>Avgångar från Liljeholmen om 10 minuter</p>
+            <h2>Avgångar från Liljeholmen om 10 minuter</h2>
             <div className="table-header">
                 <p>Linje</p>
                 <p>Mot</p>
