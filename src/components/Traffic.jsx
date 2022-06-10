@@ -3,7 +3,7 @@ import {useState, useEffect} from 'react'
 import tbana from '../assets/tbana.png'
 import tram from '../assets/tram.png'
 import bus from '../assets/bus.png'
-import './Traffic.css'
+import './Traffic.module.css'
 
 const ListItem = ({line, time, destination, img}) => {
     return <li> <div className="traffic-symbol-and-number"><img src={img} alt="traffic type"/><p>{line}</p></div> <p>{destination}</p>  <p>{time}</p></li>

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import {getWeather} from '../API/index'
-import './Weather.css'
+import './Weather.module.css'
 
 
 
@@ -39,7 +39,6 @@ const Weather = () => {
     return (
         <div>
             <h2>Väder</h2>
-            <div><i className="wi wi-night-sleet"></i></div>
             <ul>
                 {table.map(forecast => (<ListItem
                 hour={forecast.validTime}
