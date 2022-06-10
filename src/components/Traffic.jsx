@@ -3,7 +3,7 @@ import {useState, useEffect} from 'react'
 import tbana from '../assets/tbana.png'
 import tram from '../assets/tram.png'
 import bus from '../assets/bus.png'
-import './Traffic.module.css'
+import './Traffic.css'
 
 const ListItem = ({line, time, destination, img}) => {
     return <li> <div className="traffic-symbol-and-number"><img src={img} alt="traffic type"/><p>{line}</p></div> <p>{destination}</p>  <p>{time}</p></li>
@@ -56,32 +56,20 @@ const Traffic = () => {
 
     return (
         <div>
-            <h2>Avgångar från Liljeholmen om 10 minuter</h2>
-            <div className="table-header">
-                <h3>Linje</h3>
-                <h3>Mot</h3>
-                <h3>Avgår</h3>
+            <div className="traffic-box">
+                <h2>Avgångar från Liljeholmen om 10 minuter</h2>
+                <div className="table-header">
+                    <h3>Linje</h3>
+                    <h3>Mot</h3>
+                    <h3>Avgår</h3>
+                </div>
+                <ul>
+
+            {table.map(departure => (<ListItem line={departure.ProductAtStop.line} time={departure.time} destination={departure.direction} img={departure.img} key={departure.id} />) )}
+        </ul>
+
+
             </div>
-            <ul>
-        {/* {list} */}
-        {/* for(let tenDepartures of departures){
-            <li>tenDepartures.time
-            </li>        } */}
-        {/* {list.map(item => (<ListItem title={item} key={item} />) )} */}
-
-        {table.map(departure => (<ListItem line={departure.ProductAtStop.line} time={departure.time} destination={departure.direction} img={departure.img} key={departure.id} />) )}
-      </ul>
-        {/* <table>
-
-            <tr  className="table-header">
-                <th colspan="1">Linje</th>
-                <th colspan="2">Mot</th>
-                <th colspan="3">Avgår</th>
-            </tr>
-
-        {table.map(departure => (<TableRow line={departure.ProductAtStop.line} time={departure.time} destination={departure.direction} key={departure.Product.matchId} />) )}
-        </table> */}
-            {/* <button onClick={getStop}>Get stop</button> */}
         </div>
     )
 }

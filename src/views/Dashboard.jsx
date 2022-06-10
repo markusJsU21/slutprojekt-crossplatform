@@ -2,16 +2,18 @@ import Clock from '../components/Clock'
 import Traffic from '../components/Traffic'
 import Weather from '../components/Weather';
 
-import './Dashboard.module.css';
+import './Dashboard.css';
 // import Weather from '../components/Weather'
 
 const Dashboard = () => {
     return(
         <div>
-            <h1>It-Högskolan</h1>
-            <Clock />
-            <Weather/>
-            <Traffic />
+            <div className="component-container">
+                <h1>It-Högskolan</h1>
+                    <Clock className="clock" />
+                    <Weather className="weather"/>
+                    <Traffic className="traffic"/>
+            </div>
         </div>
 
     )
