@@ -1,0 +1,11 @@
+.traffic-symbol-and-number{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.traffic-symbol-and-number img{
+    height: 30px;
+    width: auto;
+}
+
