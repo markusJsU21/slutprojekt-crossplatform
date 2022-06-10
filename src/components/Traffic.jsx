@@ -19,11 +19,11 @@ const ListItem = ({line, time, destination, img}) => {
 const Traffic = () => {
 
 
+    const [table, setTable] = useState([])
+    const [id, setId] = useState(0)
 
 
     useEffect(()=>{
-        const [table, setTable] = useState([])
-        const [id, setId] = useState(0)
         function generateId(){
             setId(id + 1)
             return id
