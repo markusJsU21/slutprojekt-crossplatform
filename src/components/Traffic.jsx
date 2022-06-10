@@ -22,11 +22,12 @@ const Traffic = () => {
 
 
 
-    function generateId(){
-        setId(id + 1)
-        return id
-    }
+
     useEffect(()=>{
+        function generateId(){
+            setId(id + 1)
+            return id
+        }
         async function getTheBus(){
             const response = await getATimetable()
             const tenNext = response.Departure.slice(0, 10)
