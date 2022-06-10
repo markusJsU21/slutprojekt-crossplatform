@@ -20,19 +20,12 @@ const Traffic = () => {
     const [table, setTable] = useState([])
     const [id, setId] = useState(0)
 
-    useEffect(()=>{
-        getTheBus()
-        setInterval(()=>{
-            console.log('Calling get the bus')
-            getTheBus()
-        },3000 * 60)
-    },[])
     async function getTheBus(){
         const response = await getATimetable()
         const tenNext = response.Departure.slice(0, 10)
         for(let departure of tenNext){
             if(departure.direction.includes('(')){
-               departure.direction = departure.direction.replace(/ *\([^)]*\) */g, "");
+                departure.direction = departure.direction.replace(/ *\([^)]*\) */g, "");
             }
             departure.time = departure.time.slice(0, 5)
             departure.id = generateId()
@@ -52,6 +45,13 @@ const Traffic = () => {
         setId(id + 1)
         return id
     }
+    useEffect(()=>{
+        getTheBus()
+        setInterval(()=>{
+            console.log('Calling get the bus')
+            getTheBus()
+        },3000 * 60)
+    },[])
 
 
     return (
