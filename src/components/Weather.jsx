@@ -9,11 +9,11 @@ const ListItem = ({hour, temperature}) => {
   }
 
 const Weather = () => {
-    const [table, setTable] = useState([])
 
 
 
     useEffect(()=>{
+        const [table, setTable] = useState([])
         getWeatherForecast()
         setInterval(()=>{
             getWeatherForecast()
