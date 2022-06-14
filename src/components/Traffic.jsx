@@ -5,6 +5,8 @@ import tram from '../assets/tram.png'
 import bus from '../assets/bus.png'
 import './Traffic.css'
 
+//Gör om css filer till modules och camelcasa alla classer.
+
 const ListItem = ({line, time, destination, img}) => {
     return <li> <div className="traffic-symbol-and-number"><img src={img} alt="traffic type"/><p>{line}</p></div> <p>{destination}</p>  <p>{time}</p></li>
   }
@@ -40,10 +42,9 @@ const Traffic = () => {
             setTable(tenNext)
         }
         getTheBus()
-        setInterval(()=>{
-            console.log('Calling get the bus')
-            getTheBus()
-        },3000 * 60)
+        setInterval(
+            getTheBus
+        ,3000 * 60)
     },[])
 
 

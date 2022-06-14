@@ -5,4 +5,17 @@ import cloudySunny from '../assets/cloudy_sunny_icon.svg'
 import cloudRainSun from '../assets/cloud_raining_sun_icon.svg'
 import snow from '../assets/snow_icon.svg'
 
-export {sunny, moonRainNight, cloudRainSun, cloudySunny, cloudyLightning, snow}
+
+//Gör om till object
+const icons = {
+    1: sunny,
+    2: sunny,
+    3: cloudySunny,
+    4: cloudySunny,
+    5: cloudySunny,
+    6: cloudySunny,
+
+        , moonRainNight, cloudRainSun, cloudySunny, cloudyLightning, snow
+}
+
+export default icons

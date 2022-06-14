@@ -19,9 +19,9 @@ const Weather = () => {
     const [table, setTable] = useState([])
     useEffect(()=>{
         getWeatherForecast()
-        setInterval(()=>{
-            getWeatherForecast()
-        }, 1000 * 60 * 60)
+        setInterval(
+            getWeatherForecast
+        , 1000 * 60 * 60)
     }, [])
     async function getWeatherForecast(){
         const response = await getWeather()
