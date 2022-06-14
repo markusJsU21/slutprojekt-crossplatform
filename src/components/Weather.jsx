@@ -9,11 +9,8 @@ const ListItem = ({hour, temperature}) => {
   }
 
 const Weather = () => {
-
-
-
+    const [table, setTable] = useState([])
     useEffect(()=>{
-        const [table, setTable] = useState([])
         getWeatherForecast()
         setInterval(()=>{
             getWeatherForecast()
@@ -25,7 +22,7 @@ const Weather = () => {
         for(let forecast of forecasts){
            forecast.validTime = forecast.validTime.slice(11, 16)
            for(let param of forecast.parameters){
-            if (param.name='t'){
+            if (param.name==='t'){
                 forecast.temperature = param.values
             }
             break;
