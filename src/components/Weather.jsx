@@ -2,11 +2,11 @@ import { useEffect, useState } from 'react'
 import {getWeather} from '../API/index'
 import './Weather.css'
 import Sunny from '../assets/sunny_regular.svg'
-import MoonRainNight from '../assets/night_raining_icon.svg'
-import CloudyLightning from '../assets/cloudy_lightning_icon.svg'
+// import MoonRainNight from '../assets/night_raining_icon.svg'
+// import CloudyLightning from '../assets/cloudy_lightning_icon.svg'
 import CloudySunny from '../assets/cloudy_sunny_icon.svg'
 import CloudRainSun from '../assets/cloud_raining_sun_icon.svg'
-import Snow from '../assets/snow_icon.svg'
+// import Snow from '../assets/snow_icon.svg'
 
 
 
