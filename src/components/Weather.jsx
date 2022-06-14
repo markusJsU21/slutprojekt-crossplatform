@@ -24,8 +24,8 @@ const Weather = () => {
            for(let param of forecast.parameters){
             if (param.name==='t' && param.unit === "Cel") {
                 forecast.temperature = param.values
+                break;
             }
-            break;
            }
         }
         setTable(forecasts)
