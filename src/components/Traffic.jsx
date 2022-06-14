@@ -17,17 +17,18 @@ const ListItem = ({line, time, destination, img}) => {
 //   }
 
 const Traffic = () => {
-
-
     const [table, setTable] = useState([])
     const [id, setId] = useState(0)
 
 
+
     useEffect(()=>{
-        function generateId(){
+
+            function generateId(){
             setId(id + 1)
-            return id
-        }
+            return  id
+            }
+
         async function getTheBus(){
             const response = await getATimetable()
             const tenNext = response.Departure.slice(0, 10)
@@ -53,7 +54,7 @@ const Traffic = () => {
             console.log('Calling get the bus')
             getTheBus()
         },3000 * 60)
-    },[])
+    },[id])
 
 
     return (
