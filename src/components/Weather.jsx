@@ -22,10 +22,10 @@ const Weather = () => {
         for(let forecast of forecasts){
            forecast.validTime = forecast.validTime.slice(11, 16)
            for(let param of forecast.parameters){
-            if (param.name==='t' && param.unit === "Cel") {
+            if (param.name==='t' && param.unit === 'Cel') {
                 forecast.temperature = param.values
+                break;
             }
-            break;
            }
         }
         setTable(forecasts)
