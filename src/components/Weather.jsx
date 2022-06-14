@@ -34,7 +34,6 @@ const Weather = () => {
            forecast.img = CloudySunny
         } else if (forecast.parameters[18].values < 11)
         forecast.img = CloudRainSun
-    }
            for(let param of forecast.parameters){
             if (param.name==='t' && param.unit === 'Cel') {
                 forecast.temperature = param.values
