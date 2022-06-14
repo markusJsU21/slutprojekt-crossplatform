@@ -18,17 +18,8 @@ const ListItem = ({line, time, destination, img}) => {
 
 const Traffic = () => {
     const [table, setTable] = useState([])
-    const [id, setId] = useState(0)
-
-
 
     useEffect(()=>{
-
-            function generateId(){
-            setId(id + 1)
-            return  id
-            }
-
         async function getTheBus(){
             const response = await getATimetable()
             const tenNext = response.Departure.slice(0, 10)
@@ -37,7 +28,6 @@ const Traffic = () => {
                     departure.direction = departure.direction.replace(/ *\([^)]*\) */g, "");
                 }
                 departure.time = departure.time.slice(0, 5)
-                departure.id = generateId()
                 if(departure.ProductAtStop.catOutL.includes('Tunnelbana')){
                     departure.img = tbana
                 }else if(departure.ProductAtStop.catOutL.includes('Spårväg')){
@@ -54,7 +44,7 @@ const Traffic = () => {
             console.log('Calling get the bus')
             getTheBus()
         },3000 * 60)
-    },[id])
+    },[])
 
 
     return (
@@ -68,7 +58,7 @@ const Traffic = () => {
                 </div>
                 <ul>
 
-            {table.map(departure => (<ListItem line={departure.ProductAtStop.line} time={departure.time} destination={departure.direction} img={departure.img} key={departure.id} />) )}
+            {table.map((departure, index) => (<ListItem line={departure.ProductAtStop.line} time={departure.time} destination={departure.direction} img={departure.img} key={index} />) )}
         </ul>
 
 
