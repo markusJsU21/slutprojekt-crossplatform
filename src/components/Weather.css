@@ -4,6 +4,12 @@ i{
     height: 50px;
 }
 
+.weather-symbol{
+    height: 30px;
+    width: auto;
+    color: #693250;
+}
+
 .weather-box{
     /* background-color: rgb(246, 250, 247); */
     border: 3px solid black;
