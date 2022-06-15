@@ -7,14 +7,17 @@ const statics = self.__WB_MANIFEST
 
 self.addEventListener("install", event => {
   console.log("Installing!")
-  self.skipWaiting()
+  // self.skipWaiting()
+    event.waitUntil(
+      cache.addAll(statics)
+    )
 })
 
 self.addEventListener("activate", async () => {
   console.log("Activate!")
-  setTimeout(() => {
-    self.registration.showNotification("  m  e k k o",  {body:'!!!'})
-  }, 4000)
+  // setTimeout(() => {
+  //   self.registration.showNotification("  m  e k k o",  {body:'!!!'})
+  // }, 4000)
 })
 
 //   self.addEventListener("push", event => {
