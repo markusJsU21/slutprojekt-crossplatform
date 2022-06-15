@@ -13,7 +13,7 @@ const Clock = () => {
    }
 
     return (
-        <div>
+        <div className="clock">
             <div className={styles.clockBox}>
                 <h2>Lokal tid</h2>
                 <p>{time.toLocaleTimeString()}</p>

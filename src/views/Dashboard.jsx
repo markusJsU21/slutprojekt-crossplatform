@@ -13,10 +13,10 @@ const Dashboard = () => {
                {navigator.onLine === false &&
                <p>Your are offline and will not receive the latest information</p>
                }
-            <div className={styles.componentContainer}>
-                    <Clock className={styles.clock} />
-                    <Weather className={styles.weather}/>
-                    <Traffic className={styles.traffic}/>
+            <div className="component-container">
+                    <Clock />
+                    <Weather />
+                    <Traffic />
             </div>
         </div>
 

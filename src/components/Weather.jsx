@@ -38,7 +38,7 @@ const Weather = () => {
     }
 
     return (
-        <div>
+        <div className="weather">
             <div className={styles.weatherBox}>
                 <h2>Stockholm</h2>
                 <ul>

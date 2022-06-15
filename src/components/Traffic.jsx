@@ -49,7 +49,7 @@ const Traffic = () => {
 
 
     return (
-        <div>
+        <div className="traffic">
             <div className={styles.trafficBox}>
                 <h2>Avgångar från Liljeholmen om 10 minuter</h2>
                 <div className="table-header">
