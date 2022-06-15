@@ -10,7 +10,7 @@ const Dashboard = () => {
         <div>
             <div className="component-container">
                 <h1>It-Högskolan</h1>
-               {navigator.OnLine === false &&
+               {navigator.onLine === false &&
                <p>Your are offline and will not receive the latest information</p>
                }
                     <Clock className="clock" />
