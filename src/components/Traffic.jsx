@@ -3,12 +3,12 @@ import {useState, useEffect} from 'react'
 import tbana from '../assets/tbana.png'
 import tram from '../assets/tram.png'
 import bus from '../assets/bus.png'
-import './Traffic.css'
+import styles from './Traffic.module.css'
 
 //Gör om css filer till modules och camelcasa alla classer.
 
 const ListItem = ({line, time, destination, img}) => {
-    return <li> <div className="traffic-symbol-and-number"><img src={img} alt="traffic type"/><p>{line}</p></div> <p>{destination}</p>  <p>{time}</p></li>
+    return <li> <div className={styles.trafficSymbolAndNumber}><img src={img} alt="traffic type"/><p>{line}</p></div> <p>{destination}</p>  <p>{time}</p></li>
   }
 // const TableRow = ({line, time, destination}) => {
 //     return (<tr>
@@ -50,7 +50,7 @@ const Traffic = () => {
 
     return (
         <div>
-            <div className="traffic-box">
+            <div className={styles.trafficBox}>
                 <h2>Avgångar från Liljeholmen om 10 minuter</h2>
                 <div className="table-header">
                     <h3>Linje</h3>

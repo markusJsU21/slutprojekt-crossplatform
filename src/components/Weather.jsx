@@ -1,19 +1,14 @@
 import { useEffect, useState } from 'react'
 import {getWeather} from '../API/index'
-import './Weather.css'
-// import Sunny from '../assets/sunny_regular.svg'
+import styles from './Weather.module.css'
+
 import icons from './images'
-// import MoonRainNight from '../assets/night_raining_icon.svg'
-// import CloudyLightning from '../assets/cloudy_lightning_icon.svg'
-// import CloudySunny from '../assets/cloudy_sunny_icon.svg'
-// import CloudRainSun from '../assets/cloud_raining_sun_icon.svg'
-// import Snow from '../assets/snow_icon.svg'
 
 
 
 
 const ListItem = ({hour, temperature, symbol}) => {
-    return <li> <p>{hour}</p><img  className="weather-symbol "src={symbol} alt="weather symbol" /><p>{temperature} °C</p></li>
+    return <li> <p>{hour}</p><img  className={styles.weatherSymbol} src={symbol} alt="weather symbol" /><p>{temperature} °C</p></li>
   }
 
 const Weather = () => {
@@ -44,7 +39,7 @@ const Weather = () => {
 
     return (
         <div>
-            <div className="weather-box">
+            <div className={styles.weatherBox}>
                 <h2>Stockholm</h2>
                 <ul>
                     {table.map(forecast => (<ListItem

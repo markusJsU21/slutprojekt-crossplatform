@@ -4,19 +4,19 @@ i{
     height: 50px;
 }
 
-.weather-symbol{
+.weatherSymbol{
     height: 30px;
     width: auto;
     color: #693250;
 }
 
-.weather-box{
+.weatherBox{
     /* background-color: rgb(246, 250, 247); */
     border: 3px solid black;
     border-radius: 30px;
     padding: 2rem;
     text-align: left;
 }
-.weather-box h2{
+.weatherBox h2{
     margin: 0;
 }
