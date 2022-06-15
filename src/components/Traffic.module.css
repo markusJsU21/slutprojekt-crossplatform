@@ -1,0 +1,40 @@
+/* @media screen and (max-width: 480px) { */
+    .trafficSymbolAndNumber{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .trafficSymbolAndNumber img{
+        height: 30px;
+        width: auto;
+    }
+
+    .trafficBox{
+        /* background-color: rgb(246, 250, 247); */
+        border: 3px solid black;
+        border-radius: 30px;
+        padding: 2rem;
+        text-align: left;
+    }
+    .trafficBox h2{
+        margin: 0;
+    }
+
+/* } */
+
+
+
+/*
+@media screen and (min-width: 480px) {
+
+    body{
+        background-color: purple;
+    }
+
+} */
+
+
+
+
+
