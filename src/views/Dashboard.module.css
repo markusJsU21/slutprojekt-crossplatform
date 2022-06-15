@@ -1,0 +1,32 @@
+h1{
+    font-family: Archivo Black,sans-serif;
+    font-size: 66px;
+    font-weight: 400!important;
+
+}
+
+.ithsLogo{
+    width: 70%;
+    height: auto
+}
+
+.componentContainer{
+    display: grid;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+    grid-template-columns: 33% 33% 33%;
+}
+
+.clock{
+    grid-row-start: 1 ;
+    grid-row-end: 2;
+    grid-column-start: 1.5;
+    grid-column-end: 2.5;
+}
+.weather{
+    grid-row-start: row2-start;
+    grid-row-end: 5;
+
+}
+
+
+

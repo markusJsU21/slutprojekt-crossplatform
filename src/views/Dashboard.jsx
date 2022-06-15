@@ -3,20 +3,20 @@ import Traffic from '../components/Traffic'
 import Weather from '../components/Weather';
 import logo from '../assets/ITHS_logo.png'
 
-import './Dashboard.css';
+import styles from './Dashboard.module.css';
 // import Weather from '../components/Weather'
 
 const Dashboard = () => {
     return(
         <div>
-            <div className="component-container">
-                <img src={logo} alt="ITHS logo" className="ITHS-logo"/>
+                <img src={logo} alt="ITHS logo" className={styles.ithsLogo}/>
                {navigator.onLine === false &&
                <p>Your are offline and will not receive the latest information</p>
                }
-                    <Clock className="clock" />
-                    <Weather className="weather"/>
-                    <Traffic className="traffic"/>
+            <div className={styles.componentContainer}>
+                    <Clock className={styles.clock} />
+                    <Weather className={styles.weather}/>
+                    <Traffic className={styles.traffic}/>
             </div>
         </div>
 
