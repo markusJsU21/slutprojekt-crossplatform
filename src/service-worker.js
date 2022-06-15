@@ -6,13 +6,13 @@ const statics = self.__WB_MANIFEST
 
 
 self.addEventListener("install", event => {
-  console.log("Installing!")
-  // self.skipWaiting()
 
-    event.waitUntil(
-      caches.open('vårCache').then( cache =>
-        cache.addAll(statics)
-    ))
+  event.waitUntil(
+    caches.open('vårCache').then( cache =>
+      cache.addAll(statics)
+      ))
+      self.skipWaiting()
+      console.log("Installing!")
 })
 
 self.addEventListener("activate", async () => {
@@ -21,6 +21,20 @@ self.addEventListener("activate", async () => {
   //   self.registration.showNotification("  m  e k k o",  {body:'!!!'})
   // }, 4000)
 })
+
+
+self.addEventListener("fetch", event => {
+  console.log("You are requesting ", event.request.url);
+  event.respondWith(
+    caches.match(event.request).then(response => {
+      // If it is in in cache, respond with it
+      if(response){ return response }
+      // Otherwise, go to network
+      return fetch( event.request )
+    })
+  )
+})
+
 
 //   self.addEventListener("push", event => {
 //     const payload = event.data.text();
