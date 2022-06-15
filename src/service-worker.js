@@ -9,7 +9,7 @@ self.addEventListener("install", event => {
 
   event.waitUntil(
     caches.open('vårCache').then( cache =>
-      cache.addAll(statics)
+      cache.addAll(statics.map(static => static.url))
       ))
       self.skipWaiting()
       console.log("Installing!")
