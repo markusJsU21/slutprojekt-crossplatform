@@ -8,9 +8,11 @@ const statics = self.__WB_MANIFEST
 self.addEventListener("install", event => {
   console.log("Installing!")
   // self.skipWaiting()
+
     event.waitUntil(
-      cache.addAll(statics)
-    )
+      caches.open('vårCache').then( cache =>
+        cache.addAll(statics)
+    ))
 })
 
 self.addEventListener("activate", async () => {
