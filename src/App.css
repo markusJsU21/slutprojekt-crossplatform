@@ -10,6 +10,7 @@ body, html{
 
 p{
   margin: 0;
+  font-size: 1.5rem;
 }
 
 .App {
@@ -58,6 +59,7 @@ li{
   display:flex;
   justify-content: space-between;
   align-items: center;
+
 }
 li:nth-child(even){
   background-color: var(--iths-white);
