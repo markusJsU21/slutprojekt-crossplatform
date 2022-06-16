@@ -6,7 +6,7 @@ const handler = async (event) => {
   const timeNow = new Date()
 
   timeNow.setMinutes(timeNow.getMinutes() + 10)
-  const hours = timeNow.getHours().toString().padStart(2, '0')
+  let hours = timeNow.getHours().toString().padStart(2, '0')
   const minutes = timeNow.getMinutes().toString().padStart(2, '0')
   let current = hours + ':' + minutes
 
