@@ -5,18 +5,9 @@ import tram from '../assets/tram.png'
 import bus from '../assets/bus.png'
 import styles from './Traffic.module.css'
 
-//Gör om css filer till modules och camelcasa alla classer.
-
 const ListItem = ({line, time, destination, img}) => {
     return <li> <div className={styles.trafficSymbolAndNumber}><img src={img} alt="traffic type"/><p>{line}</p></div> <p>{destination}</p>  <p>{time}</p></li>
   }
-// const TableRow = ({line, time, destination}) => {
-//     return (<tr>
-//     <td>{line}</td>
-//     <td>{destination}</td>
-//     <td>{time}</td>
-//   </tr>)
-//   }
 
 const Traffic = () => {
     const [table, setTable] = useState([])
@@ -47,7 +38,6 @@ const Traffic = () => {
         ,1000 * 60)
     },[])
 
-
     return (
         <div className="traffic">
             <div className={styles.trafficBox}>
@@ -61,8 +51,6 @@ const Traffic = () => {
 
             {table.map((departure, index) => (<ListItem line={departure.ProductAtStop.line} time={departure.time} destination={departure.direction} img={departure.img} key={index} />) )}
         </ul>
-
-
             </div>
         </div>
     )
