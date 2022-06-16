@@ -13,8 +13,17 @@ const Traffic = () => {
     const [table, setTable] = useState([])
 
     useEffect(()=>{
+
+    const timeNow = new Date()
+
+  timeNow.setMinutes(timeNow.getMinutes() + 10)
+  let hours = timeNow.getHours().toString().padStart(2, '0')
+  const minutes = timeNow.getMinutes().toString().padStart(2, '0')
+  let current = hours + ':' + minutes
+
+
         async function getTheBus(){
-            const response = await getATimetable()
+            const response = await getATimetable(current)
             const tenNext = response.Departure.slice(0, 10)
             for(let departure of tenNext){
                 if(departure.direction.includes('(')){
