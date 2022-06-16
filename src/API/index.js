@@ -5,7 +5,7 @@ export async function getATimetable(current){
     // if(process.env.NODE_ENV === 'production'){
         try{
 
-            const response = await axios.get(`/.netlify/functions/getATimetable`, current)
+            const response = await axios.get(`/.netlify/functions/getATimetable?current=${current}`, )
             console.log(response)
             return response.data
         }catch(error){
