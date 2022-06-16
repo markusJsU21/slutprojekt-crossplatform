@@ -1,11 +1,11 @@
 import axios from 'axios'
 // axios.baseURL = 'http://localhost:8888/.netlify/functions'
 
-export async function getATimetable(){
+export async function getATimetable(current){
     // if(process.env.NODE_ENV === 'production'){
         try{
 
-            const response = await axios.get(`/.netlify/functions/getATimetable`)
+            const response = await axios.get(`/.netlify/functions/getATimetable`, current)
             console.log(response)
             return response.data
         }catch(error){
