@@ -44,7 +44,7 @@ const Traffic = () => {
         getTheBus()
         setInterval(
             getTheBus
-        ,3000 * 60)
+        ,1000 * 60)
     },[])
 
 

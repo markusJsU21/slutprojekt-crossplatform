@@ -5,8 +5,6 @@ import cloudySunny from '../assets/cloudy_sunny_icon.svg'
 import cloudRainSun from '../assets/cloud_raining_sun_icon.svg'
 import snow from '../assets/snow_icon.svg'
 
-
-//Gör om till object
 const icons = {
     1: sunny,
     2: sunny,
