@@ -11,7 +11,7 @@ const handler = async (event) => {
   let current = hours + ':' + minutes
 
   console.log(current)
-
+  //Ta bara duration = 30 min
   const url = `https://api.resrobot.se/v2.1/departureBoard?time=${current}&maxJourneys=10&id=740004046&format=json`
   try{
 

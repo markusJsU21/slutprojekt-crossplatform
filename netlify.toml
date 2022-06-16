@@ -1,4 +1,4 @@
 [build]
     functions = "functions/"
     publish = "build"
-    TZ = "Europe/Amsterdam"
+    TZ = "Europe/Stockholm"
