@@ -10,11 +10,11 @@ import styles from './Dashboard.module.css';
 const Dashboard = () => {
     const [onlineStatus, setOnlineStatus] = useState(navigator.onLine)
     function handleConnectionChange(event){
-        if(event.type == "offline"){
+        if(event.type === "offline"){
             setOnlineStatus(!onlineStatus)
             console.log("You lost connection.");
         }
-        if(event.type == "online"){
+        if(event.type === "online"){
             setOnlineStatus(!onlineStatus)
             console.log("You are now back online.");
         }
